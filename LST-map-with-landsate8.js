@@ -9,11 +9,11 @@ var landsat = ee.ImageCollection('LANDSAT/LC08/C02/T1_L2')
     .filterDate('2024-01-01', '2024-12-31') // Specify the desired date range
     .filter(ee.Filter.lt('CLOUD_COVER', 10)) // Filter images with less than 10% cloud cover
     .first();
-
-// Function to calculate Land Surface Temperature (LST)
+  
+ // Function to calculate Land Surface Temperature (LST)
 var calculateLST = function(image) {
-  // Get thermal band (Band 10)
-  var thermal = image.select('ST_B10');
+  // Get thermal band (Band 10) and scale it properly
+  var thermal = image.select('ST_B10').multiply(0.00341802).add(149.0); // Scale factor and offset
 
   // Convert from Kelvin to Celsius
   var lstCelsius = thermal.subtract(273.15).rename('LST_Celsius');
@@ -34,7 +34,8 @@ var lstVisParams = {
 // Add layers to the map
 Map.centerObject(aoi, 10);
 Map.addLayer(lst, lstVisParams, 'LST (Celsius)');
-Map.addLayer(aoi, {}, 'AOI');
+Map.addLayer(aoi, {}, 'AOI'); 
+
 
 // Export the LST raster to Google Drive
 Export.image.toDrive({
