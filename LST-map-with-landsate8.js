@@ -1,4 +1,4 @@
-LST Map with google Earth engine 
+// LST Map with google Earth engine 
 
 // Define the AOI using your shapefile link
 var aoi = ee.FeatureCollection('projects/ee-mominul58/assets/sust_area');
