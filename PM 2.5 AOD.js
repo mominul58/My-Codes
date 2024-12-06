@@ -47,6 +47,6 @@ Export.image.toDrive({
   folder: 'EarthEngine',     // Folder name in Google Drive (optional)
   fileNamePrefix: 'PM25_Map', // File name prefix
   region: aoi.geometry(),    // AOI for export
-  scale: 1000,               // Pixel resolution in meters
+  scale: 10,               // Pixel resolution in meters
   maxPixels: 1e13            // Maximum number of pixels
 });
