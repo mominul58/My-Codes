@@ -1,4 +1,6 @@
-// To create a temporal analysis chart for Land Surface Temperature (LST) over time, you can calculate the average LST for each image in the Landsat 8 ImageCollection within your AOI and then plot it. Here's how to do it in Google Earth Engine:
+// To create a temporal analysis chart for Land Surface Temperature (LST) over time, 
+// you can calculate the average LST for each image in the Landsat 8 ImageCollection 
+// within your AOI and then plot it. Here's how to do it in Google Earth Engine:
 
 // Define the AOI using your shapefile link
 var aoi = ee.FeatureCollection('projects/ee-mominul58/assets/sust_area');
