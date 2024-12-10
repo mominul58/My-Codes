@@ -1,7 +1,4 @@
-* Course Content: Introduction to Python Programming
-
-* Google Earth Engine code for
-    - LST
-    - PM2.5 AOD
-    - PM2.5 NO2
-    - LST Temporal Analysis
+#### This Repository Contains
+1. Course Content: Introduction to Python Programming
+2. Project-1 (Library Management System)[Rename as *My-Project-1(PP05).ipynb)*
+3. Basic Google Earth Engine Javascript Code *(LST, PM 2.5 AOD, NO2, Temporal Analysis)*
